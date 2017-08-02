@@ -1,0 +1,40 @@
+.question-form {
+  width: 100%;
+}
+
+.question-form div{
+  margin-top: 10px;
+  width: 100%;
+  line-height: 30px;
+  color: black;
+}
+
+.question-form div input{
+  width:100%;
+  height: 16px;
+  padding: 5px;
+  border: solid 1px #a3a29c;
+}
+
+.question-form div input:focus {
+  border-color: lightskyblue;
+  outline: none;
+}
+
+.question-form div input:hover {
+  border-color: lightskyblue;
+}
+
+.submit-button {
+  padding: 6px;
+  color: white;
+  background: red;
+  border-radius: 3px;
+  border:solid 1px lightblue;
+  cursor: pointer;
+}
+
+.submit-button[disabled] {
+  background: grey;
+}
+

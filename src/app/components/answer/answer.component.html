@@ -1,0 +1,9 @@
+<div class="answer-container">
+<div class="answer-description">{{answer.description}}</div>
+  <div class="answer-add-info">
+    <div>
+      {{getDate(answer.date_created)}}
+    </div>
+    <app-profile-preview [user_id]="answer.user_id"></app-profile-preview>
+  </div>
+</div>

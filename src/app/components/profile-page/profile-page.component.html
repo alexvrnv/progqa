@@ -1,0 +1,16 @@
+<div *ngIf="user" class="user-container">
+  <div *ngIf="user._id != curUser._id">
+  <div>Display Name: {{user.display_name}}</div>
+  <div>Last Name: {{user.last_name}}</div>
+  <div>First Name: {{user.first_name}}</div>
+  <div>Answers count: {{user.answers.length}}</div>
+  <div>Working Position: {{user.working_position}}</div>
+  </div>
+<form *ngIf="user._id == curUser._id" class="user-form" (ngSubmit)="performUser()" #qForm="ngForm">
+  <div><input type="text" name="displayName" [(ngModel)]="curUser.display_name" placeholder="your Display Name (cannot be empty)" required></div>
+  <div><input type="text" name="lastName" [(ngModel)]="curUser.last_name" placeholder="Last Name"></div>
+  <div><input type="text" name="firstName" [(ngModel)]="curUser.first_name" placeholder="First Name"></div>
+  <div><input type="text" name="workingPosition" [(ngModel)]="curUser.working_position" placeholder="Working Position"></div>
+  <div><button class="submit-button" [disabled]="qForm.form.invalid">Submit</button></div>
+</form>
+</div>

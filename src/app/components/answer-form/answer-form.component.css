@@ -1,0 +1,13 @@
+.answer-form input{
+  width: 100%;
+  padding: 10px;
+  height: 100px;
+  line-height: 20px;
+}
+
+.answer-form .submit-button {
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}

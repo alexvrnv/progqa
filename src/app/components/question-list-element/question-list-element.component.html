@@ -1,0 +1,17 @@
+  <div class="question-list-element-stats inline">
+    <div class="question-list-element-stats-counter">{{question.votes.length}}</div>
+    <div class="question-list-element-stats-element">votes</div>
+    <div class="question-list-element-stats-counter">{{question.answers.length}}</div>
+    <div class="question-list-element-stats-element">answers</div>
+    <div class="question-list-element-stats-views">{{question.views.length}} views</div>
+  </div>
+  <div class="question-list-element-description inline">
+    <div class="question-list-element-description-header"><a routerLink="/question/{{question._id}}">{{question.question_header}}</a></div>
+    <div class="question-list-element-description-short">{{question.description}}</div>
+    <div class="question-list-element-description-add-info">
+      <div>
+        {{getDate(question.date_created)}}
+      </div>
+      <app-profile-preview [user_id]="question.user_id"></app-profile-preview>
+    </div>
+  </div>

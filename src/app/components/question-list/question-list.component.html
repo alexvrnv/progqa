@@ -1,0 +1,3 @@
+<div class="question-list-container inline" *ngIf="questionList && questionList.length">
+  <app-question-list-element *ngFor="let question of questionList" [question]="question"></app-question-list-element>
+</div>

@@ -1,0 +1,9 @@
+  <form class="sign-up-form" (ngSubmit)="submit()" #qForm="ngForm">
+    <div>Display name</div>
+    <div><input type="text" name="displayname" [(ngModel)]="newDisplayName" placeholder="nametodisplay" required></div>
+    <div>Email</div>
+    <div><input type="text" name="email" [(ngModel)]="newEmail" placeholder="yourmail@example.com" required></div>
+    <div>Password</div>
+    <div><input type="password" name="password" [(ngModel)]="newPassword" placeholder="********" required></div>
+    <div><button class="sign-up-button" [disabled]="qForm.form.invalid">Sign Up</button></div>
+  </form>

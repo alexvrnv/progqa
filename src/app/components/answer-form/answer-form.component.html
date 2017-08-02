@@ -1,0 +1,6 @@
+<form class="answer-form" (ngSubmit)="performAnswer(); qForm.reset()" #qForm="ngForm">
+  <div>Answer content:</div>
+  <div><input type="text" name="questionHeader" [(ngModel)]="newAnswerDescription"
+              placeholder="write here your answer" required></div>
+  <div><button class="submit-button" [disabled]="qForm.form.invalid">Submit</button></div>
+</form>

@@ -1,0 +1,43 @@
+.sign-up-form {
+  margin: 0 auto;
+  position: absolute;
+  right:0;
+  left:0;
+  width: 400px;
+}
+
+.sign-up-form div{
+  margin-top: 10px;
+  width: 100%;
+  line-height: 30px;
+  color: black;
+}
+
+.sign-up-form div input{
+  width:100%;
+  height: 16px;
+  padding: 5px;
+  border: solid 1px #a3a29c;
+}
+
+.sign-up-form div input:focus {
+  border-color: lightskyblue;
+  outline: none;
+}
+
+.sign-up-form div input:hover {
+  border-color: lightskyblue;
+}
+
+.sign-up-button {
+  padding: 6px;
+  color: white;
+  background: #1e61ff;
+  border-radius: 3px;
+  border:solid 1px lightblue;
+  cursor: pointer;
+}
+
+.sign-up-button[disabled] {
+  background: grey;
+}

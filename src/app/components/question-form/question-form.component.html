@@ -1,0 +1,9 @@
+<form class="question-form" (ngSubmit)="performQuestion(); qForm.reset()" #qForm="ngForm">
+  <div>Question header</div>
+  <div><input type="text" name="questionHeader" [(ngModel)]="newQuestionHeader"
+              placeholder="header to display" required></div>
+  <div>Description</div>
+  <div><input type="text" name="questionDescription" [(ngModel)]="newQuestionDescription"
+              placeholder="some description of question" required></div>
+  <div><button class="submit-button" [disabled]="qForm.form.invalid">Submit</button></div>
+</form>

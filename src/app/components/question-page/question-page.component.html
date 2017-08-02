@@ -1,0 +1,55 @@
+<div *ngIf="question">
+<div class="question-page-container">
+  <div *ngIf="!editStatus" class="question-page-header">
+    {{question.question_header}}
+  </div>
+<div *ngIf="curUser" class="question-page-controls inline">
+  <div (click)="edit(true)" class="question-page-edit" *ngIf="curUser._id == question.user_id && !editStatus">
+    edit
+  </div>
+  <div (click)="vote(question._id)" class="question-page-vote" *ngIf="!voted()">
+    vote
+  </div>
+</div>
+  <div *ngIf="!editStatus" class="question-page-description inline">
+    {{question.description}}
+  </div>
+  <div class="question-page-edit-form-container" *ngIf="editStatus">
+    <form class="question-page-edit-form" (ngSubmit)="performQuestion(); edit(false);" #qForm="ngForm">
+      <div>Question header</div>
+      <div><input type="text" name="questionHeader" [(ngModel)]="tempHeader"
+                  placeholder="header to display" required></div>
+      <div>Description</div>
+      <div><input type="text" name="questionDescription" [(ngModel)]="tempDescription"
+                  placeholder="some description of question" required></div>
+      <div><button class="submit-button" [disabled]="qForm.form.invalid">Submit</button></div>
+    </form>
+    <button class="submit-button" (click)="edit(false)">Cancel</button>
+  </div>
+  <table class="question-page-stats inline">
+    <tr>
+      <td class="question-age-stats-headers">created:</td>
+      <td>{{getDate(question.date_created)}}</td>
+    </tr>
+    <tr>
+      <td class="question-age-stats-headers">viewed:</td>
+      <td>{{question.views.length}}</td>
+    </tr>
+    <tr>
+      <td class="question-age-stats-headers">rating:</td>
+      <td>{{question.votes.length}}</td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <app-profile-preview [user_id]="question.user_id"></app-profile-preview>
+      </td>
+    </tr>
+  </table>
+</div>
+<div *ngIf="curUser && !answered()" class="question-page-write-answer" >
+  <app-answer-form [question]="question"></app-answer-form>
+</div>
+<div class="question-page-answers">
+  <app-answer *ngFor="let answer of question.answers" [answer]="answer">{{answer.description}}</app-answer>
+</div>
+  </div>

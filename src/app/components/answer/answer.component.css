@@ -1,0 +1,11 @@
+.answer-add-info {
+  float: right;
+  font-size: 12px;
+  text-align: right;
+}
+
+.answer-container {
+  min-height: 200px;
+  border-bottom: solid 2px grey;
+  margin-top: 40px;
+}

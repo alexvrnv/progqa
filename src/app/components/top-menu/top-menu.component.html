@@ -1,0 +1,14 @@
+<div class="top-menu">
+  <div class="top-menu-logo">prog<span style="color:red;">QA</span></div>
+  <ul class="top-menu-elements">
+    <li><a routerLink="question-list">Questions</a></li>
+    <li *ngIf="checkUser()"><a routerLink="createQuestion">Create Question</a></li>
+  </ul>
+  <ul class="top-menu-right-elements">
+    <li *ngIf="!checkUser()" class="top-menu-log-in-button" ><a routerLink="log-in">Log In</a></li>
+    <li *ngIf="!checkUser()" class="top-menu-sign-up-button" ><a routerLink="sign-up">Sign Up</a></li>
+
+    <li *ngIf="checkUser()" class="top-menu-log-in-button" ><a routerLink="profile/{{user._id}}">Profile</a></li>
+    <li *ngIf="checkUser()" class="top-menu-sign-up-button" ><a (click)="performLogout()">Log Out</a></li>
+  </ul>
+</div>

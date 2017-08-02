@@ -1,0 +1,52 @@
+.question-list-element-stats-counter {
+  font-size: 20px;
+}
+.question-list-element-stats-element,
+.question-list-element-stats-counter,
+.question-list-element-stats-views{
+  text-align: center;
+}
+
+.question-list-element-stats-element {
+  margin-bottom: 12px;
+  font-size: 12px;
+}
+
+.question-list-element-stats-views {
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.question-list-element-description-header {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.question-list-element-description-header a {
+  color: red;
+  text-decoration: none;
+}
+
+.question-list-element-description-header:hover {
+  opacity: 0.5;
+}
+
+.question-list-element-description-add-info {
+  font-size: 12px;
+  float:right;
+  text-align: right;
+}
+
+.question-list-element-stats {
+  width: 10%;
+}
+
+.question-list-element-description {
+  width: 89%;
+}
+
+app-profile-preview {
+  float:right;
+  display: block;
+  text-align: right;
+}

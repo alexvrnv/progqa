@@ -1,0 +1,9 @@
+  <form class="log-in-form" (ngSubmit)="performLogin()">
+      <div>Email</div>
+      <div><input type="text" name="email" [(ngModel)]="newEmail" placeholder="yourmail@example.com" required></div>
+      <div>Password</div>
+      <div><input type="password" name="password" [(ngModel)]="newPassword" placeholder="********" required></div>
+      <div><button class="log-in-button">Log In</button></div>
+  </form>
+
+

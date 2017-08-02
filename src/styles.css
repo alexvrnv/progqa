@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  height: 100vh;
+  color: #757575;
+  background-color: #fafafa;
+}
+
+.inline {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.inline-middle {
+  vertical-align: middle;
+}
+
+app-profile-preview {
+  width: 200px;
+  display: block;
+  height: 80px;
+}
+
+app-question-page {
+  width: 100%;
+}
+
+
